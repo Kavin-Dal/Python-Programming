@@ -1,0 +1,9 @@
+import re
+def grades():
+    with open ("assets/grades.txt", "r") as file:
+        grades = file.read()
+    # YOUR CODE HERE
+    x = "[\w]*\ [\w]*(?=:\ B)"
+    return re.findall(x, grades)
+    raise NotImplementedError()
+print(grades())
